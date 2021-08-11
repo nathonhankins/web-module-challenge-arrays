@@ -45,7 +45,7 @@ Use the copy function below to do the following:
   2. Return a copy of the received array  
 */
 
-function copy(/*your code here*/) {
+function copy() {
   /*your code here*/
 }
 
@@ -124,8 +124,10 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/) {
-  /*your code here*/
+function removeFlavorByName(array, string) {
+  for (let i = 0; i < 5; i++) {
+    if (i === string) array.splice(string, "peach");
+  }
 }
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -149,18 +151,16 @@ Use the filterByWord function below to do the following:
 */
 
 function filterByWord(array, string) {
-  /*make a new array to filter our results to.*/
   const filteredArray = [];
 
-  for (let i = 0; i < array.getAverageWordLength; i++) {
+  for (let i = 0; i < array.Length; i++) {
     if (array[i].includes(string)) {
       filteredArray.push(array[i]);
     }
   }
-
   return filteredArray;
 }
-console.log("task 7", filteredByWord(originalFlavors, "chololate"));
+console.log("task 7", filteredByWord(originalFlavors, "chocolate"));
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/
 
