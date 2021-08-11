@@ -75,8 +75,9 @@ Use the addFlavor function below to do the following:
   For example: addFlavor(originalFlavors, "Rainbow Sherbert") should return the array ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"]
 */
 
-function addFlavor(/*your code here*/) {
-  /*your code here*/
+function addFlavor(array, string) {
+  array.unshift(string);
+  return array;
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -125,11 +126,14 @@ Use the removeFlavorByName function below to do the following:
 */
 
 function removeFlavorByName(array, string) {
-  for (let i = 0; i < 5; i++) {
-    if (i === string) array.splice(string, "peach");
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === string) {
+      array.splice(i, 1);
+    }
   }
+  return array;
 }
-
+console.log(removeFlavorByName(originalFlavors, "Rocky Road"));
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. 
 Your task is to write a function that checks every item in the array for a string and returns a new array called filteredArray with only the values 
@@ -160,7 +164,6 @@ function filterByWord(array, string) {
   }
   return filteredArray;
 }
-console.log("task 7", filteredByWord(originalFlavors, "chocolate"));
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/
 
